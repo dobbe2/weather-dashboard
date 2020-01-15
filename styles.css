@@ -1,0 +1,31 @@
+h1 {
+    color: white;
+    background-color: rgba(0, 173, 0, 0.781);
+    text-align: center;
+    padding: 20px
+}
+
+.safeUV {
+    background-color:forestgreen;
+    color: white;
+}
+
+.danger1UV {
+    background-color: gold;
+    color: white;
+}
+
+.danger2UV {
+    background: darkorange;
+    color: white;
+}
+
+.danger3UV {
+    background-color: firebrick;
+    color: white;
+}
+
+.danger4UV {
+    background-color: black;
+    color: white;
+}
