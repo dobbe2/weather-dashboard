@@ -1,0 +1,13 @@
+using the openweathermap API
+
+search for city bar.
+when input typed and searched, 3 things will need to happen
+    1. Searched city saves in list below searchbar
+    2. City data shows in seperate div with City Name, date, icon, temp, humidity, wind speed, and UV indes
+    3. Show a 5 day forecast, one per card, and have date, icon, temp, and humidity on each card.
+each previous seatched city is saved in local storage as well as saved below the search bar
+When page is reloaded, show last searched city on page load
+
+BONUS* use Geolocation API to add users current location to initial landing page
+
+To get UV Index, I will need to get the current searched citys lat and long coordinates and covert them to a seperate API call from weatherAPI

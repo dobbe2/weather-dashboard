@@ -9,38 +9,89 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <!-- Header -->
     <div id="heading">
         <h1>Weather Dashboard</h1>
     </div>
-
+    <!-- Search area -->
     <div class="container">
-       <div id="search-bar">
-           <p>Search for a City:</p>
-           <input type="text"><button id="button" type="submit">Search Icon</button>
-       </div>
-    </div>
-
-    <div class="container">
-        <div class="city-data"></div>
-        <div class="date-data"></div>
-        <div class="icon"><img id="wicon" src="" alt="weather icon"></div>
-        <div class="temp-data"></div>
-        <div class="humidity-data"></div>
-        <div class="wind-data"></div>
-        <div class="uv-index-data"></div>
-    </div>
-
-    <div class="container">
-        <div id="5day">
-
+       <div id="search-bar" class="row">
+           <div id="search-area" class="col-4">
+                <p>Search for a City:</p>
+                <input type="text" class="user-city"><button class="save" id="button" type="submit">Search Icon</button>
+            </div>
+            <!-- current city details -->
+            <div class="col-sm" id="daily-results">
+                <div class="city-data"></div>
+                <div class="date-data"></div>
+                <div class="icon"><img id="wicon" src="http://openweathermap.org/img/w/02d.png" alt="weather icon"></div>
+                <div class="temp-data"></div>
+                <div class="humidity-data"></div>
+                <div class="wind-data"></div>
+                <div class="uv-index-data"></div>
+            </div>
         </div>
     </div>
-
-
-    
-
-
-
+    <!-- Previous searched cities -->
+    <!-- <div class="container"> -->
+        <div class="row">
+            <div id="previous-search-list" class="col-4">
+                <ul>
+                    <!-- <li>last searched</li>
+                    <li>2nd to last searched</li>
+                    <li>3rd to last searched</li> -->
+                </ul>
+            </div>
+            <!-- 5 day forcast area -->
+            <div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header" id="date1">Date</div>
+                <div id="day1" class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">holder text for weather data</p>
+                </div>
+            </div>     
+            <div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header" id="date2">Date</div>
+                <div id="day2" class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">holder text for weather data</p>
+                </div>
+            </div> 
+            <div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header" id="date3">Date</div>
+                <div id="day3" class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">holder text for weather data</p>
+                </div>
+            </div> 
+            <div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header" id="date4">Date</div>
+                <div id="day4" class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">holder text for weather data</p>
+                </div>
+            </div> 
+            <div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header" id="date5">Date</div>
+                <div id="day5" class="card-body">
+                  <h5 class="card-title"></h5>
+                  <p class="card-text">holder text for weather data</p>
+                </div>
+            </div> 
+            <!-- <div class="col-sm">
+                <div  id="day2">day 2</div>
+            </div>
+            <div class="col-sm">
+                <div id="day3">day 3</div>
+            </div>
+            <div class="col-sm">
+                <div  id="day4">day 4</div>
+            </div>
+            <div class="col-sm">
+                <div  id="day5">day 5</div>
+            </div>  -->
+        <div>
+    </div>
 
   <!--JQuery-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -2,9 +2,29 @@ h1 {
     color: white;
     background-color: rgba(0, 173, 0, 0.781);
     text-align: center;
-    padding: 20px
+    padding: 20px;
+    margin-bottom: 0;
 }
 
+#search-area {
+    width: 100%;
+}
+
+#search-area {
+    background-color: rgba(185, 182, 182, 0.774);
+    border-color: grey;
+    border-radius: 5%;
+    width: 100%;
+}
+#daily-results {
+    border-color: grey;
+    border: black;
+}
+
+.uv-index-data {
+    width: 120px;
+    padding-left: 5px;
+}
 .safeUV {
     background-color:forestgreen;
     color: white;
