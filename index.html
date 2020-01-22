@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
+
 <body>
     <!-- Header -->
     <div id="heading">
@@ -15,35 +18,67 @@
     </div>
     <!-- Search area -->
     <div class="container">
-       <div id="search-bar" class="row">
-           <div id="search-area" class="col-4">
-                <p>Search for a City:</p>
-                <input type="text" class="user-city"><button class="save" id="button" type="submit">Search Icon</button>
+
+        <div class="row">
+
+            <div class="col-3">
+                <div id="search-bar" class="row">
+                    <div id="search-area">
+                        <p>Search for a City:</p>
+                        <input type="text" class="user-city"><button class="save" id="button" type="submit">Search</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="card search-list" >
+                        <ul class="list-group list-group-flush" id="previous-search-list">
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <!-- current city details -->
-            <div class="col-sm" id="daily-results">
-                <div class="city-data"></div>
-                <div class="date-data"></div>
-                <div class="icon"><img id="wicon" src="http://openweathermap.org/img/w/02d.png" alt="weather icon"></div>
-                <div class="temp-data"></div>
-                <div class="humidity-data"></div>
-                <div class="wind-data"></div>
-                <div class="uv-index-data"></div>
+
+            <!-- <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Cras justo odio</li>
+                  <li class="list-group-item">Dapibus ac facilisis in</li>
+                  <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+              </div> -->
+
+
+            <div class="col-9">
+                <div class="row" id="daily-results">
+                    <div class="card" id="daily-hide">
+                        <ul class="list-group list-group-flush">
+
+                            <li class="city-data list-group-item"></li>
+                        
+                            <li class="date-data list-group-item"></li>
+                            
+                            <li class="wicon list-group-item" id="wicon"></li>
+                            
+                            <li class="temp-data list-group-item"></li>
+                        
+                            <li class="humidity-data list-group-item"></li>
+                            
+                            <li class="wind-data list-group-item"></li>
+                            
+                            <li class="uv-index-data list-group-item"></li>
+                        </ul>
+                    </div>
+                </div>
+                    <div id="five-day-area" class="row"></div>
+                
             </div>
+
         </div>
+
     </div>
+        <!-- current city details -->
+   
     <!-- Previous searched cities -->
     <!-- <div class="container"> -->
-        <div class="row">
-            <div id="previous-search-list" class="col-4">
-                <ul>
-                    <!-- <li>last searched</li>
-                    <li>2nd to last searched</li>
-                    <li>3rd to last searched</li> -->
-                </ul>
-            </div>
-            <!-- 5 day forcast area -->
-            <div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem;">
+
+        <!-- <div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem;">
                 <div class="card-header" id="date1">Date</div>
                 <div id="day1" class="card-body">
                   <h5 class="card-title"></h5>
@@ -77,8 +112,8 @@
                   <h5 class="card-title"></h5>
                   <p class="card-text">holder text for weather data</p>
                 </div>
-            </div> 
-            <!-- <div class="col-sm">
+            </div>  -->
+        <!-- <div class="col-sm">
                 <div  id="day2">day 2</div>
             </div>
             <div class="col-sm">
@@ -90,14 +125,14 @@
             <div class="col-sm">
                 <div  id="day5">day 5</div>
             </div>  -->
-        <div>
-    </div>
 
-  <!--JQuery-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!--Moment.JS-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
-  <!--local JS-->
-  <script src="script.js"></script>
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <!--Moment.JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+        <!--local JS-->
+        <script src="script.js"></script>
 </body>
+
 </html>

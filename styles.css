@@ -6,24 +6,39 @@ h1 {
     margin-bottom: 0;
 }
 
-#search-area {
+.search-list {
     width: 100%;
+    margin: 10px;
 }
 
-#search-area {
-    background-color: rgba(185, 182, 182, 0.774);
-    border-color: grey;
-    border-radius: 5%;
-    width: 100%;
+.col-sm {
+    flex-grow: 0;
 }
+
+
+#search-area {
+    background-color: rgb(209, 204, 204);
+    border-color: grey;
+    width: 100%;
+    padding: 5px;
+    font-weight: bolder;
+}
+
+.card {
+    word-wrap: normal;
+}
+.save {
+    margin-top: 5px;
+}
+
 #daily-results {
     border-color: grey;
     border: black;
 }
 
 .uv-index-data {
-    width: 120px;
-    padding-left: 5px;
+    /* width: 120px; */
+    padding-left: 20px;
 }
 .safeUV {
     background-color:forestgreen;
@@ -49,3 +64,8 @@ h1 {
     background-color: black;
     color: white;
 }
+/* 
+.list-group-item {
+    padding: .25rem;
+    border: 0;
+} */
