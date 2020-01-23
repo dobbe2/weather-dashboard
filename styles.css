@@ -1,9 +1,18 @@
 h1 {
-    color: white;
-    background-color: rgba(0, 173, 0, 0.781);
+    color: #015249;
+    background-color: #77C9D4;
     text-align: center;
     padding: 20px;
     margin-bottom: 0;
+}
+
+#previous-cities {
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.user-city {
+    width: 100%;
 }
 
 .search-list {
@@ -15,10 +24,14 @@ h1 {
     flex-grow: 0;
 }
 
+#wicon {
+    padding: 0%;
+    padding-left: 1.25rem;
+}
 
 #search-area {
-    background-color: rgb(209, 204, 204);
-    border-color: grey;
+    background-color: #015249;
+    color: white;
     width: 100%;
     padding: 5px;
     font-weight: bolder;
@@ -27,19 +40,20 @@ h1 {
 .card {
     word-wrap: normal;
 }
+
 .save {
     margin-top: 5px;
 }
 
 #daily-results {
-    border-color: grey;
+    border-color: #EAC67A;
     border: black;
 }
 
 .uv-index-data {
-    /* width: 120px; */
     padding-left: 20px;
 }
+
 .safeUV {
     background-color:forestgreen;
     color: white;
@@ -64,8 +78,8 @@ h1 {
     background-color: black;
     color: white;
 }
-/* 
-.list-group-item {
-    padding: .25rem;
-    border: 0;
-} */
+
+/* The cards were set as blue and important through Bootstrap, so I had to Important over them to change the color */
+.bg-primary {
+    background-color: #57BC90 !important;
+}

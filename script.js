@@ -32,19 +32,15 @@ $(".save").on("click", function (getCity) {
     event.preventDefault();
 
     let city = $(".user-city").val();
-    console.log(city)
     searchCity(city)
 })
 
 //hide li element until search preformed//
  $("#daily-hide").hide();
 function searchCity(city) {
-    // let city = "";
     let APIKey = "31fa73962b45224b2df42c1fcf5470da";
     let currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + APIKey;
     let fiveDayQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=" + APIKey;
-
-    console.log(fiveDayQueryURL)
    
     //ajax call to openweathermap API//
     $.ajax({
@@ -55,19 +51,19 @@ function searchCity(city) {
             //attach search city to ul//
             if (cityArray.indexOf(city) === -1) {
                 cityArray.push(city)
-                //
                 localStorage.setItem("weather", JSON.stringify(cityArray))
                 renderHistory()
             }
             //show li area now that search is preformed//
             $("#daily-hide").show();
+            
             //attach weather data to current weather//
-
             let iconCode = currentData.weather[0].icon;
             let iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
             $(".city-data").text("City: " + currentData.name)
             $(".date-data").text("Date: " + currentDate);
-            $("#wicon").attr("src", iconURL);
+            let dailyIcon = `<img src=${iconURL}></img>`
+            $("#wicon").append(dailyIcon);
             let tempF = (currentData.main.temp - 273.15) * 9 / 5 + 32;
             let tempDecimal = tempF.toFixed(2);
             $(".temp-data").text("Temperature: " + tempDecimal + " °F");
@@ -76,7 +72,6 @@ function searchCity(city) {
             let lon = (currentData.coord.lon);
             let lat = (currentData.coord.lat);
             let uvindexURL = "https://api.openweathermap.org/data/2.5/uvi?lat=" + lat + "&lon=" + lon + "&appid=" + APIKey;
-            console.log(currentData)
             //I need the coordinates to get the UV Index from openweather API
             //Another AJAX call to get the coordinates to retrieve the UV Index
             $.ajax({
@@ -87,7 +82,6 @@ function searchCity(city) {
                     let index = (uvIndex.value)
                     $(".uv-index-data").text("UV Index: " + index);
                     //setting color code for UV index based on danger level
-                    //REMOVE CLASSES WHEN CHANGING!//
                     if (index < 2) {
                         $(".uv-index-data").removeClass("danger1UV danger2UV danger3UV danger4UV").addClass("safeUV");
                     }
@@ -103,23 +97,10 @@ function searchCity(city) {
                     else {
                         $(".uv-index-data").removeClass("safeUV danger1UV danger2UV danger3UV").addClass("danger4UV")
                     }
-                    console.log(uvindexURL)
-                    console.log(uvIndex.value)
-
                 })
-
-
-
-            console.log(currentData);
-
         })
 
-
-    console.log(currentQueryURL)
-    console.log(currentDate)
-
     //find the specific spot in the return data for all 5 days, and append to correct div//
-
     $.ajax({
         url: fiveDayQueryURL,
         mothod: "GET"
@@ -147,10 +128,8 @@ function searchCity(city) {
                             </div>
                          </div>  `
                     $("#five-day-area").append(fiveDayCard)
-                    console.log(fiveDayQueryURL)
                 }
             }
-            console.log(fiveDay)
         })
-}
+    }
 })
