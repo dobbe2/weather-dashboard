@@ -63,7 +63,7 @@ function searchCity(city) {
             $(".city-data").text("City: " + currentData.name)
             $(".date-data").text("Date: " + currentDate);
             let dailyIcon = `<img src=${iconURL}></img>`
-            $("#wicon").append(dailyIcon);
+            $("#wicon").html(dailyIcon);
             let tempF = (currentData.main.temp - 273.15) * 9 / 5 + 32;
             let tempDecimal = tempF.toFixed(2);
             $(".temp-data").text("Temperature: " + tempDecimal + " °F");
@@ -119,7 +119,7 @@ function searchCity(city) {
                     let tempF = (tempK - 273.15) * 9 / 5 + 32;
                     let temp = tempF.toFixed(2);
                     var humidity = arr[i].main.humidity
-                    var fiveDayCard = `<div class="col-sm card text-white bg-primary mb-3" style="max-width: 18rem; min-width: 120px;">
+                    var fiveDayCard = `<div class="col-sm card text-white bg-primary mb-3" id="five-day-cards" style="max-width: 18rem; min-width: 120px;">
                             <div class="card-header" id="date1">${date}</div>
                             <div id="day1" class="card-body">
                             <img src=${imglink}></img>
