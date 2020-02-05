@@ -26,6 +26,7 @@ A weather dashboard application with search functionality to find current weathe
 ## Features
 
 * Current conditions, including
+
   * City Name
   * Date
   * Icon Image
@@ -33,7 +34,9 @@ A weather dashboard application with search functionality to find current weathe
   * Humidity
   * Wind Speed
   * UV index with Color Changing background based on if levels are safe or harmful
+  
 * 5 Day Forcast, including
+
   * Date
   * Icon Image
   * Temperature
