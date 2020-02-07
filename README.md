@@ -1,7 +1,7 @@
 # Weather-Dashboard
 A weather dashboard application with search functionality to find current weather conditions and the future weather outlook for multiple cities.
 
-![](https://i.imgur.com/gRTilPx.png)
+![](https://i.imgur.com/zXAmcyE.png)
 
 ## Features
 
